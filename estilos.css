@@ -1,0 +1,288 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+.opacidade {
+opacity: 0.2; 
+background-color: darkgrey;
+}
+
+.info {
+    width: 50%;
+  margin: auto;
+  padding: 0.5%;
+}
+.header {
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+.destaque {
+position: absolute;
+margin: auto;
+width: 100%;
+}
+
+.destaque > div:not(.hidden) {
+  background-color: white;
+  width: 50%;
+  padding: 50px;
+  margin: auto;
+  opacity: 1;
+}
+.alinhar {
+  width: 100%;
+  background-color: white;
+  margin: auto;
+}
+.hidden {
+display: none;
+}
+.filters {
+  padding: 10px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: #fff;
+  gap: 10px;
+}
+
+.filter-item {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+}
+
+
+.left-section, .right-section, .center-section {
+background-color: #fff;
+padding: 1%;
+border-radius: 10px;
+box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.left-section, .right-section {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+width: 25%;
+}
+
+.center-section {
+width: 40%;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.item {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+background-color: #f9f9f9;
+padding: 15px;
+border-radius: 8px;
+box-shadow: 0 0 5px rgba(0,0,0,0.1);
+text-align: center;
+margin: 10px;
+}
+
+.item span {
+display: block;
+}
+
+.value {
+font-size: 24px;
+font-weight: bold;
+color: #333;
+}
+
+.unit {
+font-size: 14px;
+color: #888;
+}
+
+canvas {
+width: 100%;
+height: 300px;
+}
+
+
+.filter-item label {
+  font-size: 16px; 
+  margin-bottom: 5px;
+}
+
+.filter-item input {
+  padding: 8px 12px; 
+  font-size: 16px; 
+  border: 2px solid #ccc; 
+  border-radius: 8px; 
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+  transition: border-color 0.3s ease, box-shadow 0.3s ease; 
+  width: 180px; 
+}
+
+.filter-item input:focus {
+  border-color: #4CAF50; 
+  box-shadow: 0 2px 8px rgba(76, 175, 80, 0.2); 
+  outline: none; 
+}
+
+button {
+  padding: 8px 15px;
+  font-size: 14px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.container {
+  display: flex;
+  padding: 0 20px;
+  justify-content: space-between;
+}
+
+.tabela-pacientes {
+  width: 100%;
+  margin: 20px 0;
+  border-collapse: collapse;
+}
+
+.tabela-pacientes th, .tabela-pacientes td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.tabela-pacientes th {
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+}
+
+.tabela-pacientes td.alerta-fc-atual {
+  background-color: #ffcccc;
+  font-weight: bold;
+  color: #a00;
+}
+
+
+.detalhes-container {
+  padding: 20px;
+  background-color: #fff;
+  margin-top: 20px;
+}
+
+.details-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.center-section {
+  width: 60%;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+canvas {
+width: 100%;
+height: 300px;
+}
+
+.item.steps:hover, .item.freq_card:hover, .item.oxign:hover, .item.freq_atitv:hover, .item.freq_resp:hover, .item.temp_corp:hover,
+.item.exercicio:hover,
+.item.calorias:hover,
+.item.peso:hover {
+background-color: lightgrey;
+  cursor: pointer;
+}
+
+.item.selecionado {
+background-color: lightgrey;
+}
+
+select {
+    height: 50px;
+  border-radius: 10px;
+  width: 50%;
+  background-color: white;
+  font-weight: bolder;
+  padding: 5px;
+}
+
+.charts {
+  display: block;
+  justify-content: space-between;
+
+  width: 90%;
+  margin: auto;
+  background-color: white;
+
+  padding: 2.5% 5%;
+}
+.chart-exibindo {
+display: block;  
+}
+
+.hidden {
+  display: none;
+}
+
+.alert {
+  padding: 1%;
+  background-color: #ffcccc; 
+}
+.overlay {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.5); 
+z-index: 1000; 
+}
+
+.selected, .show-block {
+background-color: white !important;
+z-index: 9999999999999 !important;
+border-radius: 10px;
+padding: 5px;
+} 
+
+.show-block {
+display: block !important;
+position: relative;
+margin-left: 78%;
+width: 20%;
+}
+.selected-texto {
+display: none;
+}
+
+th.selected {
+position: relative;
+color: black;
+} 
+
+.selected > .selected-texto {
+display: block;
+}
+
+.toggle-btn.selected {
+position: relative;
+}

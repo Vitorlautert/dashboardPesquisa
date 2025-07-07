@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="estilos.css">
+    <link rel="stylesheet" href="fa/css/font-awesome.min.css"> 
+    <title>Dados dos Pacientes</title>
+
+    <meta charset="UTF-8" />
+</head>
+<body>
+      <div class="header">
+          Painel de Controle de Monitoramento Remoto
+      </div>
+      <div class="filters">
+          <div class="filter-item">
+              <label for="nome">Nome do Paciente:</label>
+              <input type="text" id="nome" name="nome">
+          </div>
+      </div>
+      
+      <div class="container" id="container">
+          <table class="tabela-pacientes">
+              <thead>
+                  <tr>
+                      <th onclick="ordenarTabela('sort-nome', 'nome')">Nome <i id='sort-nome' class="fa geral"></i></th>
+                      <th onclick="ordenarTabela('sort-idade', 'idade')">Idade <i id='sort-idade' class="fa geral"></i></th>
+                      <th onclick="ordenarTabela('sort-fcAtual', 'fcAtual')">FC Atual <i id='sort-fcAtual' class="fa geral"></i></th>
+                      <th onclick="ordenarTabela('sort-fcMedia', 'fcMedia24h')">FC Média (24h) <i id='sort-fcMedia' class="fa geral"></i></th>
+                      <th onclick="ordenarTabela('sort-fcMax', 'fcMax24h')">FC Max. (24h) <i id='sort-fcMax' class="fa geral"></i></th>
+                      <th onclick="ordenarTabela('sort-fcMin', 'fcMin24h')">FC Min. (24h) <i id='sort-fcMin' class="fa geral"></i></th>
+                      <th id="expandir-todos">Expandir</th>
+                  </tr>
+              </thead>
+              <tbody id="pacientes-tabela">
+                  </tbody>
+          </table>
+      </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-adapter-moment/1.0.0/chartjs-adapter-moment.min.js"></script>
+    <script src="script3.js"></script>
+</body>
+</html>
